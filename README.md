@@ -64,6 +64,7 @@
     ├── author-decisions.md # החלטות שאושרו על ידי שני המחברים (תקציב, כותרת 1.1)
     ├── submission-checklist.md         # רשימת ההגשה והבסיס להערכה העצמית
     ├── grade-assessment.md # הערכת ציון מנומקת לפי דרישות הקורס והחוברת
+    ├── conversation-log.md # יומן השיחה עם Claude לאורך העבודה
     └── final-checklist-and-budget.xlsx  # רשימת הגשה, תקציב (עם נוסחאות) ורשימת העריכות
 ```
 
