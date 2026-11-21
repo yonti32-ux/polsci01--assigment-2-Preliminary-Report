@@ -255,13 +255,13 @@ TASKS = [
     ("3.1", "הנחיות לסוכנים", 3, 3, False),
     ("3.2", "פיילוט ותיקוף", 5, 5, True),
     ("3.3", "סיווג מלא", 6, 7, True),
-    ("3.4", "הרצה חוזרת", 8, 8, False),
+    ("3.4", "הרצה חוזרת", 8, 8, True),
     ("4.1", "איחוד המאגר", 8, 8, True),
     ("4.2", "בדיקת ההשערות", 9, 9, True),
     ("4.3", "ניתוח רגישות", 10, 10, True),
     ("5.1", "דוח התקדמות", 6, 6, False),
     ("5.2", "דוח סיום ומאמר", 11, 12, True),
-    ("5.3", "פרסום פתוח", 12, 12, False),
+    ("5.3", "פרסום פתוח", 12, 12, True),
 ]
 MILESTONES = [(5, "תיקוף עבר"), (8, "המאגר מוכן"), (12, "פרסום")]
 GREEN = "#3D7A4A"
@@ -287,7 +287,7 @@ def gantt():
     ax.grid(axis="x", color="#E3E3E3", linewidth=0.6)
     ax.spines[["top", "right"]].set_visible(False)
     from matplotlib.patches import Patch
-    ax.legend(handles=[Patch(color=ACCENT, label=he("נתיב קריטי")),
+    ax.legend(handles=[Patch(color=ACCENT, label=he("שרשרת משוערת")),
                        Patch(color=GREY, label=he("משימה רגילה"))],
               loc="lower left", frameon=False, fontsize=8)
     fig.savefig(FIG / "ch6-gantt.pdf")

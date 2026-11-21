@@ -30,3 +30,8 @@ Three separate checks are recorded: typography/text extraction, references/evide
 Liron's historical narrative has not been rewritten. Only necessary table-width edits were made in chapters 2 and 3. Before submission, both authors should review the abstract and conclusion against the revised method, qualify universal novelty/causality claims in the historical chapters, agree the hypothetical budget, and complete the submission form and self-grade. No research, human validation, or model-classification experiment has been performed for this preliminary report.
 
 Final validation: 47 PDF pages, 7 front-matter pages and 40 numbered pages including references. All 36 citation keys and 73 labels resolve. LaTeX/Biber logs have no warnings, overflows or missing characters. Every page was rendered and its layout reviewed; detailed checks included the cover, abbreviations, requirement identifiers, literature matrix, graphs, validation plan, budget, summary callout and bibliography. Keyboxes use 11-point text with 1.15 spacing; body text remains 12-point with 1.5 spacing. The final summary box now stays on the summary page.
+
+
+## עדכון לאחר שלוש ביקורות נפרדות
+
+המצב שתואר לעיל כבדיקות בשיחה אחת הוא היסטורי. בסבב הנוכחי הופעלו בפועל שלושה סוכני משנה נפרדים ונשמרו הוראותיהם וממצאיהם ב־`agents/`. הסוכן הראשי תיקן את הממצאים וקיבל אימות חוזר. `agents/resolution.md` ו־`submission-checklist.md` הם התיעוד העדכני. התקציב וכותרת 1.1 אושרו על ידי המחברים; קריאה אנושית, קורא חיצוני וציון עצמי לא אושרו במקום המחברים.
