@@ -1,0 +1,202 @@
+{
+  "class": "template.cls",
+  "version": "1.1",
+  "date": "2026-11-21",
+  "engine": "LuaLaTeX",
+  "bibliography_backend": "Biber",
+  "commands": {
+    "reporttitle": {
+      "arguments": [
+        "Hebrew title",
+        "English title"
+      ],
+      "purpose": "Bilingual cover title"
+    },
+    "reportsubtitle": {
+      "arguments": [
+        "Hebrew subtitle",
+        "English subtitle"
+      ],
+      "purpose": "Bilingual cover subtitle"
+    },
+    "reporttype": {
+      "arguments": [
+        "Hebrew document type",
+        "English document type"
+      ],
+      "purpose": "Document type on cover"
+    },
+    "institution": {
+      "arguments": [
+        "Hebrew institution",
+        "English institution"
+      ],
+      "purpose": "Institution on cover"
+    },
+    "course": {
+      "arguments": [
+        "course name"
+      ],
+      "purpose": "Course metadata"
+    },
+    "semester": {
+      "arguments": [
+        "semester"
+      ],
+      "purpose": "Semester metadata"
+    },
+    "authors": {
+      "optional_arguments": [
+        "English names separated by \\and"
+      ],
+      "arguments": [
+        "Hebrew names separated by \\and"
+      ],
+      "purpose": "Author names; original one-argument form supported"
+    },
+    "lecturer": {
+      "arguments": [
+        "lecturer name"
+      ],
+      "purpose": "Lecturer metadata"
+    },
+    "submissiondate": {
+      "arguments": [
+        "display date"
+      ],
+      "purpose": "Submission date"
+    },
+    "runningtitles": {
+      "arguments": [
+        "short Hebrew title",
+        "short English title"
+      ],
+      "purpose": "Override both running headers"
+    },
+    "makecoverpage": {
+      "arguments": [],
+      "purpose": "Original unnumbered cover"
+    },
+    "frontmatter": {
+      "arguments": [],
+      "purpose": "Start Hebrew-letter page labels"
+    },
+    "mainmatter": {
+      "arguments": [],
+      "purpose": "Restart numbered body at 1"
+    },
+    "en": {
+      "arguments": [
+        "short English string"
+      ],
+      "purpose": "LTR isolation in Hebrew prose"
+    },
+    "LR": {
+      "arguments": [
+        "complete LTR string or numeric/reference range"
+      ],
+      "purpose": "Protect the entire directional unit"
+    },
+    "keywords": {
+      "arguments": [
+        "semicolon-separated keywords"
+      ],
+      "purpose": "Keywords after summary; ends front-matter page"
+    },
+    "abbr": {
+      "arguments": [
+        "term",
+        "definition"
+      ],
+      "purpose": "One row inside abbreviations"
+    },
+    "chapter": {
+      "arguments": [
+        "title"
+      ],
+      "purpose": "Standard chapter"
+    },
+    "section": {
+      "arguments": [
+        "title"
+      ],
+      "purpose": "Standard section"
+    },
+    "subsection": {
+      "arguments": [
+        "title"
+      ],
+      "purpose": "Standard subsection"
+    },
+    "cite": {
+      "arguments": [
+        "bibliography key(s)"
+      ],
+      "purpose": "biblatex source citation"
+    },
+    "label": {
+      "arguments": [
+        "unique key"
+      ],
+      "purpose": "Standard reference anchor"
+    },
+    "ref": {
+      "arguments": [
+        "key"
+      ],
+      "purpose": "Cross-reference; isolate complete multi-number ranges"
+    },
+    "printbibliography": {
+      "arguments": [],
+      "purpose": "Print LTR English bibliography"
+    }
+  },
+  "environments": {
+    "executivesummary": {
+      "arguments": [],
+      "purpose": "Executive summary and TOC entry"
+    },
+    "abbreviations": {
+      "arguments": [],
+      "purpose": "Two-column term list; use abbr rows"
+    },
+    "keybox": {
+      "arguments": [
+        "Hebrew title"
+      ],
+      "purpose": "Unbroken highlighted block"
+    },
+    "reportconstraints": {
+      "arguments": [],
+      "purpose": "Compact itemize at unchanged body font size"
+    },
+    "table": {
+      "arguments": [],
+      "purpose": "Standard float; caption above table"
+    },
+    "figure": {
+      "arguments": [],
+      "purpose": "Standard float; caption below figure"
+    }
+  },
+  "colors": {
+    "accent": "#820000",
+    "secondary": "#330f53",
+    "cream": "#fcfbf4",
+    "accentlight": "alias of cream"
+  },
+  "dependencies": [
+    "fonts/ with OFL notices",
+    "TikZ",
+    "polyglossia",
+    "biblatex",
+    "tcolorbox",
+    "longtable"
+  ],
+  "build": "lualatex main.tex; biber main; lualatex main.tex; lualatex main.tex",
+  "examples": [
+    "../main.tex",
+    "template-prompt.md"
+  ],
+  "changelog": "../CHANGELOG.md"
+}

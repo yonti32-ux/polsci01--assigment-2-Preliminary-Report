@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 % Shared visual system. Keep chapter content in chapters/, not in this class.
 % Build with LuaLaTeX, Biber, then LuaLaTeX twice (or use build.ps1).
-\ProvidesClass{template}[2026/11/21 v1.0 Burgundy purple and cream Hebrew report]
+\ProvidesClass{template}[2026/11/21 v1.1 Burgundy purple and cream Hebrew report]
 \LoadClass[12pt,a4paper,oneside,openany]{book}
 \RequirePackage{iftex}
 \ifLuaTeX\else\ClassError{template}{Use LuaLaTeX to build this report}{}\fi
@@ -114,8 +114,11 @@
   before upper={\selectlanguage{hebrew}},before skip=10pt,after skip=10pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\small\color{secondary}\texthebrew{דת ויציבות מדינית}}
-\fancyhead[L]{\small\color{muted}\textenglish{Preliminary Report}}
+\def\runningHeb{דת ויציבות מדינית}
+\def\runningEng{Preliminary Report}
+\newcommand{\runningtitles}[2]{\def\runningHeb{#1}\def\runningEng{#2}}
+\fancyhead[R]{\small\color{secondary}\texthebrew{\runningHeb}}
+\fancyhead[L]{\small\color{muted}\textenglish{\runningEng}}
 \fancyfoot[C]{\color{accent}\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\color{accent}\thepage}\renewcommand{\headrulewidth}{0pt}}
@@ -134,7 +137,8 @@
 \newcommand{\institution}[2]{\def\instHeb{#1}\def\instEng{#2}}
 \newcommand{\course}[1]{\def\courseText{#1}}
 \newcommand{\semester}[1]{\def\semesterText{#1}}
-\newcommand{\authors}[1]{\def\authorsText{#1}}
+% Optional English line; the original one-argument form still works.
+\newcommand{\authors}[2][]{\def\authorsText{#2}\def\authorsEnglish{#1}}
 \newcommand{\lecturer}[1]{\def\lecturerText{#1}}
 \newcommand{\submissiondate}[1]{\def\dateText{#1}}
 \newcommand{\makecoverpage}{%
@@ -166,6 +170,9 @@
   \vfill
   {\Large\bfseries\color{secondary}\typeHeb\par}\textenglish{\typeEng}\par
   \vspace{6mm}{\let\and\quad\authorsText\par}
+  \ifx\authorsEnglish\@empty\else
+    {\small\let\and\quad\textenglish{\authorsEnglish}\par}
+  \fi
   \lecturerText\par\textenglish{\dateText}\par
   \vspace{5mm}{\footnotesize\textenglish{\copyright\ 2026}\quad כל הזכויות שמורות למחברים\par}
   \end{titlepage}\hypersetup{pageanchor=true}}
