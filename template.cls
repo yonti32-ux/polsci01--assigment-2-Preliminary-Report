@@ -171,6 +171,9 @@
   \end{titlepage}\hypersetup{pageanchor=true}}
 \newenvironment{executivesummary}{\chapter*{תקציר מנהלים}\addcontentsline{toc}{chapter}{תקציר מנהלים}}{\par}
 \newcommand{\keywords}[1]{\medskip\noindent\textbf{מילות מפתח:} #1\clearpage}
+% Related constraints stay compact without reducing the body font size.
+\newenvironment{reportconstraints}{\begin{itemize}%
+  \setlength{\itemsep}{2pt}\setlength{\parsep}{0pt}\setlength{\parskip}{0pt}}{\end{itemize}}
 \newenvironment{abbreviations}{\chapter*{קיצורים ומונחים}\addcontentsline{toc}{chapter}{קיצורים ומונחים}\small\singlespacing
   \begin{longtable}{@{}p{.19\linewidth}p{.75\linewidth}@{}}}{\end{longtable}\clearpage}
 % \leavevmode first: a \color at the very start of a p-cell lands in vertical
